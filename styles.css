@@ -103,6 +103,10 @@ input:focus {
     outline: var(--input-focus-border);
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #E5E7EB;
 }
+input:valid {
+    outline: var(--form-link-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #E5E7EB;
+}
 form > p {
     padding-inline: 3rem;
 }
