@@ -1,7 +1,12 @@
+:root {
+    --form-link-color: #596D48;
+    --input-border: 1px solid #c9cbce;
+    --input-focus-border: 1px solid blue;
+}
 * {
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
 }
 @font-face {
@@ -15,11 +20,11 @@ body {
     animation: fadeIn 500ms ease-in-out;
 }
 img {
-    width: clamp(3rem, 4rem, 5rem);
+    width: clamp(4rem, 5rem, 6rem);
     height: auto;
 }
 img + span {
-    font-size: clamp(4rem, 5rem, 6rem);
+    font-size: clamp(5rem, 6rem, 7rem);
     font-family: Norse-Bold;
 }
 .img-container {
@@ -27,7 +32,7 @@ img + span {
     height: 100vh;
     flex: 1;
     background-image: url(./halie-west-25xggax4bSA-unsplash.jpg);
-    background-size: contain;
+    background-size: cover;
     color: white;
 }
 .img-container a {
@@ -35,20 +40,94 @@ img + span {
 }
 .img-container p {
    position: absolute;
+   font-size: 1rem;
    bottom: 0;
-   right: 25%;
-   left: 25%;
+   right: 20%;
+   left: 20%;
    margin: 1rem;
 }
 .img-sidebar {
-    margin-top: 8rem;
+    margin-top: 9rem;
     background-color: rgba(0, 0, 0, 0.5);    
     text-align: center;
 }
 main {
+    width: 100vw;
     flex: 2;
+    justify-content: center;
+    padding-top: 4.8rem;
+    background-color: rgb(250, 250, 250);
 }
-
+main > p {
+    width: clamp(60ch, 50%, 75ch);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-inline: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-block: 0.6rem;
+}
+.form-section {
+    padding-block: 0.5rem;
+    background-color: white;
+    box-shadow: 1rem 1rem 1rem 1rem #E5E7EB;
+    padding-inline: 3rem;
+}
+form p {
+    width: clamp(52ch, 50%, 75ch);
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+    padding-block: 0.6rem;
+}
+label {
+    display: block;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.2ch;
+}
+form section {
+    display: flex;
+    flex-direction: row;
+    margin-block: 0.5rem 2rem;
+}
+input {
+    border: var(--input-border);
+    margin-right: 8rem;
+    border-radius: 0.25rem;
+    width: 20rem;
+    height: 2rem;
+    padding-inline: 0.5rem;
+}
+input:focus {
+    outline: var(--input-focus-border);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #E5E7EB;
+}
+form > p {
+    padding-inline: 3rem;
+}
+form > button {
+    margin-inline: 3rem;
+    margin-block: 2rem;
+    background-color: var(--form-link-color);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    height: 3rem;
+    width: 18rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+form a {
+    color: var(--form-link-color);
+    text-decoration: none;
+}
+form a:visited {
+    color: var(--form-link-color);
+}
 
 @keyframes fadeIn {
     0% {opacity: 0;}
