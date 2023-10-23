@@ -90,10 +90,12 @@ form section {
     display: flex;
     flex-direction: row;
     margin-block: 0.5rem 2rem;
+    flex-wrap: wrap;
 }
 input {
     border: var(--input-border);
-    margin-right: 8rem;
+    margin-right: 7rem;
+    margin-bottom: 2rem;
     border-radius: 0.25rem;
     width: 20rem;
     height: 2rem;
@@ -129,8 +131,8 @@ form a {
     color: var(--form-link-color);
     text-decoration: none;
 }
-form a:visited {
-    color: var(--form-link-color);
+form a:hover {
+    text-decoration: underline;
 }
 
 @keyframes fadeIn {
